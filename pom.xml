@@ -28,7 +28,9 @@
     </developers>
 
     <scm>
-        <url>https://streammachine.io</url>
+        <url>https://github.com/streammachineio/java-schema-common</url>
+        <connection>scm:git:https://github.com/streammachineio/java-schema-common.git</connection>
+        <developerConnection>scm:git:https://github.com/streammachineio/java-schema-common.git</developerConnection>
     </scm>
 
     <properties>
