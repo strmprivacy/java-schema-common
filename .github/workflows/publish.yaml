@@ -16,8 +16,14 @@ jobs:
         with:
           java-version: '8'
           distribution: 'adopt'
+      - name: Extract tag name
+        shell: bash
+        run: echo "##[set-output name=tag;]$(echo ${GITHUB_REF#refs/tags/})"
+        id: extract_branch
       - name: Build
         uses: burrunan/gradle-cache-action@v1
+        env:
+          CI_COMMIT_TAG: ${{ steps.extract_branch.outputs.tag }}
         with:
           arguments: publishToSonatype closeAndReleaseSonatypeStagingRepository
           gradle-version: wrapper

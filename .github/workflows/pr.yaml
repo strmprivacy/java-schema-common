@@ -19,8 +19,14 @@ jobs:
         with:
           java-version: '8'
           distribution: 'adopt'
+      - name: Extract branch name
+        shell: bash
+        run: echo "##[set-output name=branch;]$(echo ${GITHUB_REF#refs/heads/})"
+        id: extract_branch
       - name: Build
         uses: burrunan/gradle-cache-action@v1
+        env:
+          CI_COMMIT_REF_NAME: ${{ steps.extract_branch.outputs.branch }}
         with:
           arguments: build signMavenJavaPublication
           gradle-version: wrapper
