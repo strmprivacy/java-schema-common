@@ -66,10 +66,6 @@ allprojects {
     }
 }
 
-ext["grpcVersion"] = "1.37.1"
-ext["grpcKotlinVersion"] = "1.0.0" // CURRENT_GRPC_KOTLIN_VERSION
-ext["protobufVersion"] = "3.13.0"
-
 fun base64Decode(prop: String): String? {
     return project.findProperty(prop)?.let {
         String(Base64.getDecoder().decode(it.toString())).trim()
