@@ -20,10 +20,8 @@ publishing {
         register("mavenJava", MavenPublication::class) {
             from(components["java"])
 
-            artifacts {
-                add("archives", sourcesJar)
-                add("archives", javadocJar)
-            }
+            artifact(sourcesJar)
+            artifact(javadocJar)
 
             groupId = "io.streammachine.schemas"
             artifactId = "schema-common"
