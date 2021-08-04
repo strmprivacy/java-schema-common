@@ -25,6 +25,8 @@ val tag = System.getenv("CI_COMMIT_TAG")
 rootProject.version = if (tag != null || branch == "master") project.version else "${project.version}-SNAPSHOT"
 
 nexusPublishing {
+    packageGroup.set("io.streammachine")
+
     repositories {
         sonatype {
             username.set(base64Decode("sonatypeUsername"))
