@@ -1,21 +1,27 @@
-import org.gradle.api.tasks.testing.logging.TestLogEvent.FAILED
-import org.gradle.api.tasks.testing.logging.TestLogEvent.SKIPPED
-import org.gradle.api.tasks.testing.logging.TestLogEvent.STARTED
-
 plugins {
     id("maven-publish")
 }
+
 
 val sourcesJar = tasks.register("sourcesJar", Jar::class) {
     from(sourceSets["main"].allSource)
     archiveClassifier.set("sources")
 }
 
+val javadocJar = tasks.register("javadocJar", Jar::class) {
+    from(tasks["javadoc"])
+    archiveClassifier.set("javadoc")
+}
+
 publishing {
     publications {
         register("mavenJava", MavenPublication::class) {
             from(components["java"])
-            artifact(sourcesJar)
+
+            artifacts {
+                add("archives", sourcesJar)
+                add("archives", javadocJar)
+            }
 
             groupId = "io.streammachine.schemas"
             artifactId = "schema-common"

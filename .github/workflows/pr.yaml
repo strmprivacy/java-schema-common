@@ -9,7 +9,7 @@ permissions:
   contents: write
 
 jobs:
-  release:
+  build:
     runs-on: ubuntu-latest
 
     steps:
@@ -25,7 +25,9 @@ jobs:
           git config user.name "Stream Machine"
       - name: Configure GPG Key
         run: |
-          echo -n "$GPG_PRIVATE_KEY" | base64 --decode | gpg --import
+          mkdir -p ~/.gnupg/
+          printf "$GPG_PRIVATE_KEY" | base64 --decode > ~/.gnupg/private.key
+          gpg --import ~/.gnupg/private.key
         env:
           GPG_PRIVATE_KEY: ${{secrets.GPG_PRIVATE_KEY}}
       - name: Publish
