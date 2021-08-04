@@ -20,10 +20,15 @@ jobs:
           java-version: '8'
           distribution: 'adopt'
       - name: Build
-        uses: burrunan/gradle-cache-action@v1
-        with:
-          arguments: build signMavenJavaPublication
-          gradle-version: wrapper
-          properties: |
-            gpgPrivateKey=${{secrets.GPG_PRIVATE_KEY_BASE64_ENC}}
-            gpgPassphrase=${{secrets.GPG_PASSPHRASE_BASE64_ENC}}
+        run: |
+          ./gradlew --stacktrace -P gpgPrivateKey=${{secrets.GPG_PRIVATE_KEY_BASE64_ENC}} \
+            -P gpgPassphrase=${{secrets.GPG_PASSPHRASE_BASE64_ENC}} \
+            build signMavenJavaPublication
+#      - name: Build
+#        uses: burrunan/gradle-cache-action@v1
+#        with:
+#          arguments: build signMavenJavaPublication
+#          gradle-version: wrapper
+#          properties: |
+#            gpgPrivateKey=${{secrets.GPG_PRIVATE_KEY_BASE64_ENC}}
+#            gpgPassphrase=${{secrets.GPG_PASSPHRASE_BASE64_ENC}}
