@@ -19,14 +19,10 @@ jobs:
         with:
           java-version: '8'
           distribution: 'adopt'
-      - name: Configure Git user
-        run: |
-          git config user.email "apis@streammachine.io"
-          git config user.name "Stream Machine"
-      - name: Publish
+      - name: Build
         uses: burrunan/gradle-cache-action@v1
         with:
-          arguments: build --build-cache
+          arguments: build
           gradle-version: wrapper
           properties: |
             gpgPrivateKey=${{secrets.GPG_PRIVATE_KEY}}
