@@ -1,5 +1,5 @@
 import org.ajoberstar.grgit.Grgit
-
+import java.util.*
 
 plugins {
     id("java-library")
@@ -26,9 +26,9 @@ rootProject.version = if (tag != null || branch == "master") project.version els
 
 nexusPublishing {
     repositories {
-        sonatype{
-            username.set(System.getenv("MAVEN_OSSRH_USER"))
-            password.set(System.getenv("MAVEN_OSSRH_PASSWORD"))
+        sonatype {
+            username.set(base64Decode("sonatypeUsername"))
+            password.set(base64Decode("sonatypePassword"))
         }
     }
 }
@@ -67,3 +67,9 @@ allprojects {
 ext["grpcVersion"] = "1.37.1"
 ext["grpcKotlinVersion"] = "1.0.0" // CURRENT_GRPC_KOTLIN_VERSION
 ext["protobufVersion"] = "3.13.0"
+
+fun base64Decode(prop: String): String? {
+    return project.findProperty(prop)?.let {
+        String(Base64.getDecoder().decode(it.toString())).trim()
+    }
+}
