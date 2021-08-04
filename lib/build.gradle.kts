@@ -1,7 +1,9 @@
+import java.util.Base64
+
 plugins {
     id("maven-publish")
+    id("signing")
 }
-
 
 val sourcesJar = tasks.register("sourcesJar", Jar::class) {
     from(sourceSets["main"].allSource)
@@ -58,4 +60,15 @@ publishing {
     }
 }
 
+signing {
+    useInMemoryPgpKeys(base64Decode("gpgPrivateKey"), base64Decode("gpgPassphrase"))
+    sign(*publishing.publications.toTypedArray())
+}
+
 tasks.findByName("publish")?.dependsOn("build")
+
+fun base64Decode(prop: String): String? {
+    return project.findProperty(prop)?.let {
+        String(Base64.getDecoder().decode(it.toString())).trim()
+    }
+}
