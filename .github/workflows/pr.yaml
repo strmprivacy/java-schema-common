@@ -21,9 +21,7 @@ jobs:
           distribution: 'adopt'
       - name: Build
         run: |
-          ./gradlew --stacktrace -P gpgPrivateKey=${{secrets.GPG_PRIVATE_KEY_BASE64_ENC}} \
-            -P gpgPassphrase=${{secrets.GPG_PASSPHRASE_BASE64_ENC}} \
-            build signMavenJavaPublication
+          ./gradlew --stacktrace -P gpgPrivateKey=${{secrets.GPG_PRIVATE_KEY_BASE64_ENC}} -P gpgPassphrase=${{secrets.GPG_PASSPHRASE_BASE64_ENC}} build signMavenJavaPublication
 #      - name: Build
 #        uses: burrunan/gradle-cache-action@v1
 #        with:
