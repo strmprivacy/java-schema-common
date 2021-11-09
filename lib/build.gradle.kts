@@ -23,14 +23,14 @@ publishing {
             artifact(sourcesJar)
             artifact(javadocJar)
 
-            groupId = "io.streammachine.schemas"
+            groupId = "io.strmprivacy.schemas"
             artifactId = "schema-common"
             version = project.version.toString()
 
             pom {
                 name.set("$groupId:$artifactId")
-                description.set("Common module for Stream Machine schemas.")
-                url.set("https://streammachine.io")
+                description.set("Common module for Strm Privacy schemas.")
+                url.set("https://strmprivacy.io")
 
                 licenses {
                     license {
@@ -42,16 +42,16 @@ publishing {
                 developers {
                     developer {
                         name.set("Stream Machine B.V.")
-                        email.set("apis@streammachine.io")
+                        email.set("apis@strmprivacy.io")
                         organization.set("Stream Machine B.V.")
-                        organizationUrl.set("https://streammachine.io")
+                        organizationUrl.set("https://strmprivacy.io")
                     }
                 }
 
                 scm {
-                    url.set("https://github.com/streammachineio/java-schema-common")
-                    connection.set("scm:git:git://github.com/streammachineio/java-schema-common.git")
-                    developerConnection.set("scm:git:git://github.com/streammachineio/java-schema-common.git")
+                    url.set("https://github.com/strmprivacyio/java-schema-common")
+                    connection.set("scm:git:git://github.com/strmprivacyio/java-schema-common.git")
+                    developerConnection.set("scm:git:git://github.com/strmprivacyio/java-schema-common.git")
                 }
             }
         }
