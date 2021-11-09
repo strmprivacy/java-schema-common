@@ -1,3 +1,10 @@
+## [1.1.2](https://github.com/streammachineio/java-schema-common/compare/v1.1.1...v1.1.2) (2021-11-09)
+
+
+### Bug Fixes
+
+* use s01 domain for sonatype ([99458fc](https://github.com/streammachineio/java-schema-common/commit/99458fc07eae85257fa3dce3488aab8548c2796a))
+
 ## [1.1.1](https://github.com/streammachineio/java-schema-common/compare/v1.1.0...v1.1.1) (2021-11-09)
 
 
