@@ -1,10 +1,10 @@
-package io.streammachine.schemas;
+package io.strmprivacy.schemas;
 
 /**
- * An event to be sent to Stream Machine. All events that are sent by the Stream Machine
+ * An event to be sent to Strm Privacy. All events that are sent by the Strm Privacy
  * Java Driver must implement this interface.
  */
-public interface StreamMachineEvent {
+public interface StrmEvent {
 
     /**
      * Get the Schema Ref for the Schema that goes with this event.
@@ -13,7 +13,7 @@ public interface StreamMachineEvent {
     String getSchemaRef();
 
     /**
-     * Old version of {@link StreamMachineEvent#getSchema()}.
+     * Old version of {@link StrmEvent#getSchema()}.
      * @return The schema.
      * @deprecated This method will be removed in java-schema-common 1.0.0.
      */
