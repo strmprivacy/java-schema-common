@@ -1,3 +1,10 @@
+## [1.1.3](https://github.com/streammachineio/java-schema-common/compare/v1.1.2...v1.1.3) (2021-11-09)
+
+
+### Bug Fixes
+
+* renaming ([1fdb2b3](https://github.com/streammachineio/java-schema-common/commit/1fdb2b3cfc4084eebd3c9792d72a0611246e1712))
+
 ## [1.1.2](https://github.com/streammachineio/java-schema-common/compare/v1.1.1...v1.1.2) (2021-11-09)
 
 
