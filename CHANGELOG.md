@@ -1,3 +1,10 @@
+## [1.1.1](https://github.com/streammachineio/java-schema-common/compare/v1.1.0...v1.1.1) (2021-11-09)
+
+
+### Bug Fixes
+
+* fix sonatype host ([f2ef331](https://github.com/streammachineio/java-schema-common/commit/f2ef3319ad542b12533a10a4b04ea2be00d9c0e7))
+
 # [1.1.0](https://github.com/streammachineio/java-schema-common/compare/v1.0.0...v1.1.0) (2021-11-09)
 
 
