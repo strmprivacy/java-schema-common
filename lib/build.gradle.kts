@@ -49,9 +49,9 @@ publishing {
                 }
 
                 scm {
-                    url.set("https://github.com/strmprivacyio/java-schema-common")
-                    connection.set("scm:git:git://github.com/strmprivacyio/java-schema-common.git")
-                    developerConnection.set("scm:git:git://github.com/strmprivacyio/java-schema-common.git")
+                    url.set("https://github.com/strmprivacy/java-schema-common")
+                    connection.set("scm:git:git://github.com/strmprivacy/java-schema-common.git")
+                    developerConnection.set("scm:git:git://github.com/strmprivacy/java-schema-common.git")
                 }
             }
         }
