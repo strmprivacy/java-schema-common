@@ -1,3 +1,10 @@
+# [1.2.0](https://github.com/streammachineio/java-schema-common/compare/v1.1.3...v1.2.0) (2021-11-10)
+
+
+### Features
+
+* rename StrmEvent to StrmPrivacyEvent ([8fec9fb](https://github.com/streammachineio/java-schema-common/commit/8fec9fbabca4e81bdd6aab4aabc663c7c910b317))
+
 ## [1.1.3](https://github.com/streammachineio/java-schema-common/compare/v1.1.2...v1.1.3) (2021-11-09)
 
 
