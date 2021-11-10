@@ -4,7 +4,7 @@ package io.strmprivacy.schemas;
  * An event to be sent to Strm Privacy. All events that are sent by the Strm Privacy
  * Java Driver must implement this interface.
  */
-public interface StrmEvent {
+public interface StrmPrivacyEvent {
 
     /**
      * Get the Schema Ref for the Schema that goes with this event.
@@ -13,7 +13,7 @@ public interface StrmEvent {
     String getSchemaRef();
 
     /**
-     * Old version of {@link StrmEvent#getSchema()}.
+     * Old version of {@link StrmPrivacyEvent#getSchema()}.
      * @return The schema.
      * @deprecated This method will be removed in java-schema-common 1.0.0.
      */
