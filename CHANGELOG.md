@@ -1,3 +1,15 @@
+# [2.0.0](https://github.com/streammachineio/java-schema-common/compare/v1.2.0...v2.0.0) (2021-11-10)
+
+
+### Features
+
+* naming consistency ([5fececf](https://github.com/streammachineio/java-schema-common/commit/5fececf734ac0842f0bae0f8f5ec6bc1cf89c7c2))
+
+
+### BREAKING CHANGES
+
+* StreamMachineEvent -> StrmPrivacyEvent
+
 # [1.2.0](https://github.com/streammachineio/java-schema-common/compare/v1.1.3...v1.2.0) (2021-11-10)
 
 
