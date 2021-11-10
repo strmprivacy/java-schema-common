@@ -1,7 +1,7 @@
 package io.strmprivacy.schemas;
 
 /**
- * An event to be sent to Strm Privacy. All events that are sent by the Strm Privacy
+ * An event to be sent to STRM Privacy. All events that are sent by the Strm Privacy
  * Java Driver must implement this interface.
  */
 public interface StrmPrivacyEvent {

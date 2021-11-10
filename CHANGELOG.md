@@ -31,7 +31,7 @@
 
 ### Features
 
-* rename to strm privacy ([b5119b6](https://github.com/streammachineio/java-schema-common/commit/b5119b68819bd775efbe631c79921fa5231a5d61))
+* rename to STRM Privacy ([b5119b6](https://github.com/streammachineio/java-schema-common/commit/b5119b68819bd775efbe631c79921fa5231a5d61))
 
 # 1.0.0 (2021-08-04)
 

@@ -29,7 +29,7 @@ publishing {
 
             pom {
                 name.set("$groupId:$artifactId")
-                description.set("Common module for Strm Privacy schemas.")
+                description.set("Common module for STRM Privacy schemas.")
                 url.set("https://strmprivacy.io")
 
                 licenses {
