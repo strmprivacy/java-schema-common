@@ -1,3 +1,10 @@
+## [2.0.1](https://github.com/strmprivacy/java-schema-common/compare/v2.0.0...v2.0.1) (2021-12-13)
+
+
+### Bug Fixes
+
+* upgraded grgit, node and removed semantic-release-gradle-plugin ([29b3506](https://github.com/strmprivacy/java-schema-common/commit/29b3506f7d02ca8bcf23a8b0927df8ab4edba55c))
+
 # [2.0.0](https://github.com/streammachineio/java-schema-common/compare/v1.2.0...v2.0.0) (2021-11-10)
 
 
